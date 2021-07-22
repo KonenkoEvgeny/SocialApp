@@ -75,12 +75,12 @@ class ViewController: UIViewController {
     @IBOutlet var passwordTextLabel: UITextField!
     
     @IBAction func enterButtonAction(_ sender: Any) {
-        let login = loginTextLabel.text ?? ""
-        let password = passwordTextLabel.text ?? ""
-         if (!(login.isEmpty && password.isEmpty) && (login == "111" && password == "111")) {
+//        let login = loginTextLabel.text ?? ""
+//        let password = passwordTextLabel.text ?? ""
+//         if (!(login.isEmpty && password.isEmpty) && (login == "111" && password == "111")) {
             print("вы вошли в social")
-       } else {
-             print("ошибка")}
+      // } else {
+        //     print("ошибка")}
     }
     
     
