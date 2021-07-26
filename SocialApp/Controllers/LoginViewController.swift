@@ -12,8 +12,42 @@ class ViewController: UIViewController {
     // строки 18-66 взяты из методички для работы с клавиатурой. Единственно я добавил аутлет для скроллВью. Строки 71-84 уже добавлял сам ручками. Спасибо за помощь в удалении аутлетов. Теперь знаю, как это делать
     
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var welcomeTextLabel: UILabel!
+    @IBOutlet var loginTextLabel: UITextField!
+    @IBOutlet var passwordTextLabel: UITextField!
     
+    @IBAction func enterButtonAction(_ sender: Any) {
+//        let login = loginTextLabel.text ?? ""
+//        let password = passwordTextLabel.text ?? ""
+//         if (!(login.isEmpty && password.isEmpty) && (login == "111" && password == "111")) {
+            print("вы вошли в social")
+      // } else {
+        //     print("ошибка")}
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
+        // Второе — когда она пропадает
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+    override func viewDidLoad() {
+            super.viewDidLoad()
+         
+            // Жест нажатия
+            let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+            // Присваиваем его UIScrollVIew
+            scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        }
     
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
@@ -35,59 +69,9 @@ class ViewController: UIViewController {
         scrollView?.contentInset = contentInsets
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
-        // Второе — когда она пропадает
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-            
-            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        }
-    
     @objc func hideKeyboard() {
             self.scrollView?.endEditing(true)
         }
-
-    
-    override func viewDidLoad() {
-            super.viewDidLoad()
-         
-            // Жест нажатия
-            let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-            // Присваиваем его UIScrollVIew
-            scrollView?.addGestureRecognizer(hideKeyboardGesture)
-        }
-    
-    
-    
-    
-    @IBOutlet var welcomeTextLabel: UILabel!
-    
-    @IBOutlet var loginTextLabel: UITextField!
-    
-    @IBOutlet var passwordTextLabel: UITextField!
-    
-    @IBAction func enterButtonAction(_ sender: Any) {
-//        let login = loginTextLabel.text ?? ""
-//        let password = passwordTextLabel.text ?? ""
-//         if (!(login.isEmpty && password.isEmpty) && (login == "111" && password == "111")) {
-            print("вы вошли в social")
-      // } else {
-        //     print("ошибка")}
-    }
-    
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//    }
 
 
 }
