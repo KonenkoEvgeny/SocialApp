@@ -9,20 +9,25 @@ import UIKit
 
 class UniversalTableCell: UITableViewCell {
 
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+   // @IBOutlet weak var avatarImageView: UIImageView!
+   // @IBOutlet weak var backView: UIView!
+@IBOutlet weak var titleLabel: UILabel!
+@IBOutlet weak var avatarImageView: AvatarView!
     
     var saveObject: Any?
     
     func setup() {
-        avatarImageView.layer.cornerRadius = 25
-        backView.layer.cornerRadius = 25
-        backView.layer.shadowColor = UIColor.black.cgColor
-        backView.layer.shadowRadius = 5
-        backView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        backView.layer.shadowOpacity = 0.5
-  
+        
+        // перенес в классы аватара и тени
+//        avatarImageView.layer.cornerRadius = 25 // делаем аватарку круглой
+//        avatarImageView.contentMode = .scaleAspectFill // обрезаем картинку под круг
+        
+//        backView.layer.cornerRadius = 25 // работаем с тенью
+//        backView.layer.shadowColor = UIColor.black.cgColor
+//        backView.layer.shadowRadius = 5
+//        backView.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        backView.layer.shadowOpacity = 0.5
+//
     }
     
     func clearCell(){

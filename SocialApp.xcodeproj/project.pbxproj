@@ -18,6 +18,8 @@
 		5355FE8126ADCFFC00CA5D4D /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5355FE7F26ADCFFC00CA5D4D /* PhotoCell.xib */; };
 		5355FE8326ADE8F500CA5D4D /* AllGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355FE8226ADE8F500CA5D4D /* AllGroupController.swift */; };
 		5355FE8526ADEC9F00CA5D4D /* MyGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355FE8426ADEC9F00CA5D4D /* MyGroupController.swift */; };
+		53AE8D8B26B5214D002D34B7 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE8D8A26B5214D002D34B7 /* ShadowView.swift */; };
+		53AE8D8D26B542EA002D34B7 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AE8D8C26B542EA002D34B7 /* AvatarView.swift */; };
 		53F5CA4526A1BB3B009649F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5CA4426A1BB3B009649F4 /* AppDelegate.swift */; };
 		53F5CA4726A1BB3B009649F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5CA4626A1BB3B009649F4 /* SceneDelegate.swift */; };
 		53F5CA4926A1BB3B009649F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F5CA4826A1BB3B009649F4 /* LoginViewController.swift */; };
@@ -57,6 +59,8 @@
 		5355FE7F26ADCFFC00CA5D4D /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		5355FE8226ADE8F500CA5D4D /* AllGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupController.swift; sourceTree = "<group>"; };
 		5355FE8426ADEC9F00CA5D4D /* MyGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupController.swift; sourceTree = "<group>"; };
+		53AE8D8A26B5214D002D34B7 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowView.swift; path = SocialApp/Cell/ShadowView.swift; sourceTree = SOURCE_ROOT; };
+		53AE8D8C26B542EA002D34B7 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		53F5CA4126A1BB3B009649F4 /* SocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F5CA4426A1BB3B009649F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F5CA4626A1BB3B009649F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		5355FE7B26ADCEA300CA5D4D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				53AE8D8A26B5214D002D34B7 /* ShadowView.swift */,
+				53AE8D8C26B542EA002D34B7 /* AvatarView.swift */,
 				5355FE6F26AC1BC000CA5D4D /* UniversalTableCell.swift */,
 				5355FE7026AC1BC000CA5D4D /* UniversalTableCell.xib */,
 				5355FE7E26ADCFFC00CA5D4D /* PhotoCell.swift */,
@@ -326,7 +332,9 @@
 				5355FE7526AD5C5800CA5D4D /* User.swift in Sources */,
 				5355FE8026ADCFFC00CA5D4D /* PhotoCell.swift in Sources */,
 				53F5CA4926A1BB3B009649F4 /* LoginViewController.swift in Sources */,
+				53AE8D8D26B542EA002D34B7 /* AvatarView.swift in Sources */,
 				5355FE8526ADEC9F00CA5D4D /* MyGroupController.swift in Sources */,
+				53AE8D8B26B5214D002D34B7 /* ShadowView.swift in Sources */,
 				53F5CA4526A1BB3B009649F4 /* AppDelegate.swift in Sources */,
 				53F5CA4726A1BB3B009649F4 /* SceneDelegate.swift in Sources */,
 			);
